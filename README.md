@@ -56,12 +56,19 @@ The system monitors front and rear distances, shows measurements on the OLED scr
 
 ---
 
-## Wiring Notes
+## Wiring Diagrams
 
-- **JSN-SR04T Sensors:** VCC → 5V, GND → GND, TRIG/ECHO → Mega digital pins above.  
-- **OLED Display:** SDA → 20, SCL → 21, VCC → 5V, GND → GND.  
-- **DIY Speaker:** Negative wire → GND, both positive wires connected together → Pin 5.  
-- **Push Button:** One side → Pin 4, Other side → GND.  
+### Real Hardware Wiring
+
+This picture shows the actual wiring of the Arduino Mega parking sensor system:
+
+![Real Wiring](docs/parking_sensor.jpg)
+
+### Wokwi Simulation Wiring
+
+This screenshot shows how the project is wired in the Wokwi simulator:
+
+![Wokwi Wiring](docs/wokwi_Parking_sensor.jpg)
 
 ---
 
@@ -134,3 +141,9 @@ You can **run and interact with the parking sensor project online** using the Wo
 
 ## Project Structure
 
+arduino-mega-parking-sensor/
+├─ parking_sensor.ino # Main Arduino sketch
+├─ docs/
+│ ├─ parking_sensor.jpg # Real wiring photo
+│ └─ wokwi_Parking_sensor.jpg # Wokwi simulation screenshot
+├─ README.md
