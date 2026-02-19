@@ -1,6 +1,6 @@
 # Arduino Mega Parking Sensor System
 
-A **parking sensor system** built with an **Arduino Mega 2560**, using **JSN-SR04T ultrasonic sensors**, a **0.96” 128×64 OLED display**, and a DIY speaker to alert the driver of nearby obstacles.  
+A **parking sensor system** built with an **Arduino Mega 2560**, using **JSN-SR04T ultrasonic sensors**, a **0.96” 128×64 OLED display**, a DIY speaker for alerts, and a **100 µF polarized capacitor** for power stabilization.  
 
 The system monitors front and rear distances, shows measurements on the OLED screen, and produces variable beep tones depending on proximity. A toggle button allows enabling or disabling the system.
 
@@ -13,6 +13,7 @@ The system monitors front and rear distances, shows measurements on the OLED scr
 - Produces audio alerts through a DIY speaker.
 - Includes a button to enable or disable the system.
 - Implements smoothing of sensor readings to reduce noise.
+- Uses a polarized capacitor to stabilize power rails.
 - Note: JSN-SR04T sensors are only reliable for distances **greater than 20 cm**. Distances below 20 cm may be inaccurate.
 
 **Hardware Components:**
@@ -24,6 +25,7 @@ The system monitors front and rear distances, shows measurements on the OLED scr
   [View Display](https://www.temu.com/si-en/0-96-inch-oled-display-module--128x64--yellow-white-g-601099658217397.html)
 - DIY Speaker (used instead of a piezo buzzer)
 - Push Button
+- 100 µF / 40 V polarized capacitor (for power rail stabilization)
 
 **Software / Libraries:**
 
@@ -53,6 +55,8 @@ The system monitors front and rear distances, shows measurements on the OLED scr
 | OLED SCL | 21 | I²C clock pin |
 | Power (VCC) | 5V | Common 5V rail |
 | Ground (GND) | GND | Common ground |
+| Capacitor + | 5V | Positive side of 100 µF capacitor |
+| Capacitor – | GND | Negative side of 100 µF capacitor (arrows on body) |
 
 ---
 
@@ -101,7 +105,9 @@ The OLED shows sensor distances with Slovene labels:
 4. **Speaker Alerts:**  
    - Continuous tone if distance <20 cm.  
    - Variable beep interval proportional to distance between 20–99 cm.  
-5. **Limitation:** JSN-SR04T sensors are only reliable above 20 cm. Distances under 20 cm may produce inaccurate readings. Better sensors would be recommended for very close distances.
+5. **Power Stabilization:**  
+   - The 100 µF capacitor wired across 5V and GND rails smooths voltage fluctuations.  
+6. **Limitation:** JSN-SR04T sensors are only reliable above 20 cm. Distances under 20 cm may produce inaccurate readings.
 
 ---
 
@@ -112,7 +118,7 @@ The OLED shows sensor distances with Slovene labels:
    - Adafruit GFX Library  
    - Adafruit SSD1306  
    - SoftwareWire (optional, only for custom I²C pins)  
-2. Connect all components according to the pin mapping.  
+2. Connect all components according to the pin mapping and capacitor polarity.  
 3. Open `parking_sensor.ino` in Arduino IDE.  
 4. Compile and upload to your **Arduino Mega 2560**.  
 
@@ -136,4 +142,3 @@ You can **run and interact with the parking sensor project online** using the Wo
 
 - Some portions of the code and documentation were assisted by AI tools for guidance and optimization.  
 - The final code, wiring, and practical implementation were completed and tested by me on real hardware.
-
