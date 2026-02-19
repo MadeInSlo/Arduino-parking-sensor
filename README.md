@@ -94,7 +94,7 @@ The OLED shows sensor distances with Slovene labels:
 4. **Speaker Alerts:**  
    - Continuous tone if distance <20 cm.  
    - Variable beep interval proportional to distance between 20–99 cm.  
-5. **Limitation:** JSN-SR04T sensors are only reliable above 20 cm. Distances under 20 cm may produce inaccurate readings. If the project were to be improved, better sensors would be used for very close distances.
+5. **Limitation:** JSN-SR04T sensors are only reliable above 20 cm. Distances under 20 cm may produce inaccurate readings. Better sensors would be recommended for very close distances.
 
 ---
 
@@ -122,6 +122,13 @@ You can **run and interact with the parking sensor project online** using the Wo
 - Adjust sensor distance sliders to simulate obstacles in front or behind the vehicle.  
 - Watch the OLED display update in real time.  
 - The speaker reacts according to proximity, mimicking the real hardware.
+
+---
+
+## Notes / AI Assistance
+
+- Some portions of the code and documentation were assisted by AI tools for guidance and optimization.  
+- The final code, wiring, and practical implementation were completed and tested by me on real hardware.
 
 ---
 
