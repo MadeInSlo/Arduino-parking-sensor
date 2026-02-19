@@ -68,7 +68,7 @@ This picture shows the actual wiring of the Arduino Mega parking sensor system:
 
 This screenshot shows how the project is wired in the Wokwi simulator:
 
-![Wokwi Wiring](docs/wokwi_Parking_sensor.jpg)
+![Wokwi Wiring](docs/wokwi_Parking_Sensor.jpg)
 
 ---
 
@@ -137,14 +137,3 @@ You can **run and interact with the parking sensor project online** using the Wo
 - Some portions of the code and documentation were assisted by AI tools for guidance and optimization.  
 - The final code, wiring, and practical implementation were completed and tested by me on real hardware.
 
----
-
-## Project Structure
-
-arduino-mega-parking-sensor/
-├─ src/
-│ └─ parking_sensor.ino # Main Arduino sketch
-├─ docs/
-│ ├─ parking_sensor.jpg # Photo of the real hardware wiring
-│ └─ wokwi_Parking_sensor.jpg # Screenshot of wiring in Wokwi simulation
-└─ README.md # Project documentation
