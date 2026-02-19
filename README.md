@@ -56,7 +56,7 @@ The system monitors front and rear distances, shows measurements on the OLED scr
 | Power (VCC) | 5V | Common 5V rail |
 | Ground (GND) | GND | Common ground |
 | Capacitor + | 5V | Positive side of 100 µF capacitor |
-| Capacitor – | GND | Negative side of 100 µF capacitor (arrows on body) |
+| Capacitor – | GND | Negative side of 100 µF capacitor |
 
 ---
 
@@ -82,10 +82,10 @@ The OLED shows sensor distances with Slovene labels:
 
 | Label | Meaning |
 |-------|---------|
-| **Leva** | Left rear sensor |
-| **Sredina** | Center rear sensor |
-| **Desna** | Right rear sensor |
-| **Spredaj** | Front sensor |
+| **LEVA** | Left rear sensor |
+| **SREDINA** | Center rear sensor |
+| **DESNA** | Right rear sensor |
+| **SPREDAJ** | Front sensor |
 
 - If any sensor detects an object **<20 cm**, the display shows **“STOP”**.  
 - For sensors ≥20 cm, the numeric distance is displayed in **cm** next to the label.
