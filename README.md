@@ -142,8 +142,9 @@ You can **run and interact with the parking sensor project online** using the Wo
 ## Project Structure
 
 arduino-mega-parking-sensor/
-├─ parking_sensor.ino # Main Arduino sketch
+├─ src/
+│ └─ parking_sensor.ino # Main Arduino sketch
 ├─ docs/
-│ ├─ parking_sensor.jpg # Real wiring photo
-│ └─ wokwi_Parking_sensor.jpg # Wokwi simulation screenshot
-├─ README.md
+│ ├─ parking_sensor.jpg # Photo of the real hardware wiring
+│ └─ wokwi_Parking_sensor.jpg # Screenshot of wiring in Wokwi simulation
+└─ README.md # Project documentation
